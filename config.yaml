@@ -1,0 +1,20 @@
+# 需要提前配置好所有仓库的密钥，保证可以拉取最新的更新
+repos:
+  - dir: hub
+    # 用于拉取仓库
+    uri: https://github.com/mislav/hub
+    # 上游名称 默认不写为: origin
+    # remote: upstream
+    # 默认分支名称 不写为：main
+    branch: master
+  - dir: git-sync
+    uri: https://github.com/kubernetes/git-sync
+    branch: master
+
+pack:
+  enable: true
+  # 打包输出的目录 默认为当前目录
+  target: ""
+  # 设置打包的密码 不填则不加密码
+  password: tar-out-123456
+
